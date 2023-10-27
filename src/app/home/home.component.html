@@ -1,10 +1,11 @@
-<!-- <b>Enter User Data</b>
-<form #userData="ngForm" (ngSubmit)="addUser(userData)" >
+<b>Enter User Data</b>
+<form #userData="ngForm" (ngSubmit)="addUser(userData)" (ngSubmit)="updateUser(userData)" >
   UserId: <input type="text" name="userid" ngModel/><br>
   Password: <input type="text" name="password" ngModel/><br>
   EmailId: <input type="email" name="emailid" ngModel/><br>
   <input type="submit" value="AddUser" /><br>
-  <input type="button" value="GetUser" (click)="getAllUsers()" /><br> 
+  <input type="button" value="GetUser" (click)="getAllUsers()" /><br>
+  <input type="submit" value="update" /><br>
   
 </form>
 <br><p>{{this.expresponse.substring(3,this.expresponse.length-4)}} </p><br><br>
@@ -21,11 +22,8 @@
     <td>{{ user.emailid }}</td>
   </tr>
   </tbody>
-</table><br><br> -->
+</table><br><br>
 
-<nav>
-  <a routerLink="/login">Login</a>
-  
-</nav>
+
   <!--<input type="submit"  (click)="updateUser()" /><br> <br>-->
-  <router-outlet></router-outlet>
+  
